@@ -285,7 +285,7 @@
                     "fileUris": [
                       "[variables('customScriptUri')]"
                     ],
-                    "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('customScriptFolder'), '/', variables('customScriptUriScriptFileName'))]"
+                    "commandToExecute": "[concat('powershell -ExecutionPolicy Unrestricted -File ', variables('customScriptFolder'), '/', variables('customScriptUriScriptFileName'), ' ', '-user', ' ', parameters('adminUsername'), ' ', '-password', ' ',  parameters('adminPassword'))]"
                   }
                 }
               }
